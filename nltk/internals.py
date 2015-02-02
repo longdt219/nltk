@@ -156,6 +156,10 @@ def java(cmd, classpath=None, stdin=None, stdout=None, stderr=None,
     (stdout, stderr) = p.communicate()
 
     # Check the return code.
+    # Long Duong : Check (after concatenate the java)
+    print (' After concatenate with java arguments ')
+    print (str(cmd))
+    
     if p.returncode != 0:
         print(_decode_stdoutdata(stderr))
         raise OSError('Java command failed : ' + str(cmd))

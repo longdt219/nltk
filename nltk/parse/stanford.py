@@ -230,7 +230,10 @@ class StanfordParser(ParserI):
             input_file.flush()
 
             cmd.append(input_file.name)
-
+            # Long Duong : test (need to be removed)  
+            print (' Execute command : ')
+            print list(cmd)
+            
             # Run the tagger and get the output.
             stdout, stderr = java(cmd, classpath=(self._stanford_jar, self._model_jar),
                                   stdout=PIPE, stderr=PIPE)
